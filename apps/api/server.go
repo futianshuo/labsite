@@ -24,6 +24,7 @@ func initRouter(db *gorm.DB) *gin.Engine {
 	registerBannerRoutes(r, db)
 	registerMediaRoutes(r, db)
 	registerAboutRoutes(r, db)
+	registerHighlightRoutes(r, db)
 
 	return r
 }

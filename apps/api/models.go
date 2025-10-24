@@ -67,6 +67,17 @@ type AboutImage struct {
 	CreatedAt time.Time `json:"created_at"`
 }
 
+type Highlight struct {
+	ID          uint      `json:"id" gorm:"primaryKey"`
+	Title       string    `json:"title"`
+	Summary     string    `json:"summary"`
+	PaperLink   string    `json:"paper_link"`
+	ImageURL    string    `json:"image_url"`
+	Sort        int       `json:"sort"`
+	PublishedAt time.Time `json:"published_at"`
+	Split       int       `json:"split" gorm:"default:30"` // 新增
+}
+
 // ===== JWT Claims / 请求体 =====
 type Claims struct {
 	UID  uint   `json:"uid"`

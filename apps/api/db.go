@@ -21,6 +21,7 @@ func mustDB() *gorm.DB {
 		&Member{}, &User{},
 		&News{}, &Banner{}, &NewsImage{},
 		&AboutPage{}, &AboutImage{},
+		&Highlight{},
 	); err != nil {
 		log.Fatal(err)
 	}
